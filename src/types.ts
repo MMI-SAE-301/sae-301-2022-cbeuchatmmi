@@ -31,3 +31,13 @@ export const materiaux = [
 
 ];
 
+export const forme = [
+    {
+        label: "Rond",
+        value: "Rond",
+    },
+    {
+        label: "Carré",
+        value: "Carre",
+    },
+]
