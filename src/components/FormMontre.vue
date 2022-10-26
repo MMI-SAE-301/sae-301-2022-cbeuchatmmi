@@ -59,30 +59,26 @@ const optionsMateriaux = listeMateriaux?.map((materiaux) => ({
 }));
 
 
-// async function supprimerMontre() {
-//     const { data, error } = await supabase
-//         .from("montre")
-//         .delete()
-//         .match({ idmontre: montre.value.idmontre });
-//     if (error) {
-//         console.error(
-//             "Erreur à la suppression de ",
-//             montre.value,
-//             "erreur :",
-//             error
-//         );
-//     } else {
-//         router.push("/montre/new");
-//     }
-// }
+async function supprimerMontre() {
+    const { data, error } = await supabase
+        .from("montre")
+        .delete()
+        .match({ idmontre: montre.value.idmontre });
+    if (error) {
+        console.error(
+            "Erreur à la suppression de ",
+            montre.value,
+            "erreur :",
+            error
+        );
+    } else {
+        router.push("/montre/new");
+    }
+}
 </script>
 <template>
     <div class="p-2">
 
-        <div class="carousel w-64">
-            <MontreCarre class="carousel-item w-64" v-bind="montre" id="carre" />
-            <MontreRonde class="carousel-item w-64" v-bind="montre" id="ronde" />
-        </div>
 
 
         <FormKit type="form" v-model="montre" @submit="upsertMontre" submit-label="Enregistrer">
@@ -103,12 +99,27 @@ const optionsMateriaux = listeMateriaux?.map((materiaux) => ({
             <FormKitEcran name="ecran" label="Écran" />
             <FormKit label="forme" name="forme" type="radio" :options="forme" options-class="flex gap-4" />
 
-
         </FormKit>
 
+        <button type="button" v-if="montre.idmontre" @click="($refs.dialogSupprimer as any).showModal()"
+            class="focus-style justify-self-end rounded-md bg-red-500 p-2 shadow-sm">
+            Supprimer
+        </button>
+        <dialog ref="dialogSupprimer" @click="($event.currentTarget as any).close()">
+            <button type="button" class="focus-style justify-self-end rounded-md bg-blue-300 p-2 shadow-sm">
+                Annuler</button><button type="button" @click="supprimerMontre()"
+                class="focus-style rounded-md bg-red-500 p-2 shadow-sm">
+                Confirmer suppression
+            </button>
+        </dialog>
 
 
 
 
+
+        <div class="carousel w-64">
+            <MontreCarre class="carousel-item w-64" v-bind="montre" id="carre" />
+            <MontreRonde class="carousel-item w-64" v-bind="montre" id="ronde" />
+        </div>
     </div>
 </template>
