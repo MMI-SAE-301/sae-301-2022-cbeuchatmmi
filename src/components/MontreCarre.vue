@@ -10,9 +10,9 @@ withDefaults(defineProps<Montre>(), {
 });
 </script>
 <template>
-    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 476.37 710.79">
-        <defs>
 
+    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 380.41 710.79">
+        <defs>
             <radialGradient id="radial-gradient" cx="1027.95" cy="-22914.37" r="28.95"
                 gradientTransform="translate(-1141.66 5795.64) scale(1.14 0.25)" gradientUnits="userSpaceOnUse">
                 <stop offset="0.1" stop-color="#dadada" stop-opacity="0.95" />
@@ -147,42 +147,34 @@ withDefaults(defineProps<Montre>(), {
         <g id="Calque_2" data-name="Calque 2">
             <g id="bracelet">
                 <path :fill="bracelet" class="bracelet" stroke="#000000"
-                    d="M134.85,27.79S187,7.5,233.41,9s95.65,15.94,95.65,15.94-29,271-26.09,349.27,27.54,307.25,27.54,307.25-47.83,21.74-92.76,18.84-97.1-17.39-97.1-17.39,23.89-239.13,23.89-333.33S134.85,27.79,134.85,27.79Z" />
+                    d="M91.24,27.79S143.41,7.5,189.79,9s95.65,15.94,95.65,15.94-29,271-26.09,349.27,27.54,307.25,27.54,307.25-47.83,21.74-92.75,18.84S97,682.86,97,682.86s23.88-239.13,23.88-333.33S91.24,27.79,91.24,27.79Z" />
                 <path :fill="bracelet" class="bracelet" stroke="#000000"
-                    d="M94.27,164.7s39.14-77.57,34.79-135c0,0,17.39-29.48,102.9-29.48S342.1,20.42,342.1,20.42s14.8,117.91,35.09,139.63c0,0-96,20.17-148.13,20.17S94.27,164.7,94.27,164.7Z" />
+                    d="M50.66,164.7s39.13-77.57,34.78-135c0,0,17.39-29.48,102.9-29.48S298.48,20.42,298.48,20.42s14.8,117.91,35.09,139.63c0,0-96,20.17-148.13,20.17S50.66,164.7,50.66,164.7Z" />
                 <path :fill="bracelet" class="bracelet" stroke="#000000"
-                    d="M378.86,548.31s-40.81,77-37.7,134.78c0,0-18,29.22-103.52,27.37S128,687.83,128,687.83s-12.23-118.71-32-141c0,0,96.37-18.18,148.54-17S378.86,548.31,378.86,548.31Z" />
+                    d="M335.24,548.31s-40.8,77-37.7,134.78c0,0-18,29.22-103.52,27.37S84.34,687.83,84.34,687.83s-12.23-118.71-32-141c0,0,96.37-18.18,148.53-17S335.24,548.31,335.24,548.31Z" />
             </g>
-            <g id="boitier" data-name="boitier">
-                <g>
-                    <path stroke="#000000" :fill="boitier"
-                        d="M238.18,591.64a238.06,238.06,0,1,1,168.33-69.72A236.51,236.51,0,0,1,238.18,591.64Z" />
-                    <path :fill="boitier"
-                        d="M238.18,115.65a237.21,237.21,0,1,1-92.61,18.7,236.45,236.45,0,0,1,92.61-18.7m0-.25C106.64,115.4,0,222,0,353.58S106.64,591.77,238.18,591.77,476.37,485.13,476.37,353.58,369.73,115.4,238.18,115.4Z" />
-                </g>
-                <g>
+            <g id="boitier">
+                <rect stroke="#000000" :fill="boitier" x="0.25" y="130.63" width="379.91" height="453.62" rx="80.8" />
 
-                    <path :fill="boitier"
-                        d="M238.18,133.33a219.58,219.58,0,1,1-85.73,17.31,218.83,218.83,0,0,1,85.73-17.31m0-.25c-121.78,0-220.51,98.72-220.51,220.5S116.4,574.09,238.18,574.09s220.51-98.72,220.51-220.51S360,133.08,238.18,133.08Z" />
-                </g>
-                <circle stroke="#000000" :fill="ecran" cx="238.18" cy="353.58" r="194.53" />
+                <rect stroke="#000000" :fill="ecran" x="38.43" y="172.53" width="303.55" height="369.83" rx="65.21" />
             </g>
             <g id="ecran">
-                <text class="cls-36" transform="translate(103.58 329.78)">1O:1O</text>
-                <text class="cls-37" transform="translate(152.89 222.03)">
+                <text class="cls-36" transform="translate(59.96 329.78)">1O:1O</text>
+                <text class="cls-37" transform="translate(109.28 222.03)">
                     <tspan xml:space="preserve">Lun. 24 oct.</tspan>
                 </text>
-                <text class="cls-37" transform="translate(178.96 511.45)">TiK•TaK</text>
-                <use width="35.92" height="35.92" transform="translate(292.7 396.86) scale(1.22)"
+                <text class="cls-37" transform="translate(135.34 511.45)">TiK•TaK</text>
+                <use width="35.92" height="35.92" transform="translate(249.08 396.86) scale(1.22)"
                     xlink:href="#Chargement_4" />
-                <use width="66.17" height="72" transform="translate(132.27 395.79) scale(0.64)"
+                <use width="66.17" height="72" transform="translate(88.65 395.79) scale(0.64)"
                     xlink:href="#Orb_-_Gris" />
-                <use width="48" height="48" transform="translate(212.64 394.86)" xlink:href="#Puce_6_-_Gris" />
+                <use width="48" height="48" transform="translate(169.03 394.86)" xlink:href="#Puce_6_-_Gris" />
             </g>
         </g>
     </svg>
 </template>
-<style >
+  
+<style>
 .cls-1 {
     fill: #bbbdbf;
 }
