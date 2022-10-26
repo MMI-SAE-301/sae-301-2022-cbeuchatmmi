@@ -46,6 +46,19 @@ if (props.id) {
     if (error || !data) console.log("n'a pas pu charger les montres :", error);
     else montre.value = data[0];
 }
+
+
+const { data: listeMateriaux, error } = await supabase
+    .from("materiaux")
+    .select("*");
+if (error) console.log("n'a pas pu charger la table Materiaux :", error);
+// Les convertir par `map` en un tableau d'objets {value, label} pour FormKit
+const optionsMateriaux = listeMateriaux?.map((materiaux) => ({
+    value: materiaux.idmateriaux,
+    label: materiaux.libelle,
+}));
+
+
 // async function supprimerMontre() {
 //     const { data, error } = await supabase
 //         .from("montre")
@@ -70,11 +83,15 @@ if (props.id) {
             <MontreCarre class="carousel-item w-64" v-bind="montre" id="carre" />
             <MontreRonde class="carousel-item w-64" v-bind="montre" id="ronde" />
         </div>
-        <FormKit type="form" v-model="montre" @submit="upsertMontre">
+
+
+        <FormKit type="form" v-model="montre" @submit="upsertMontre" submit-label="Enregistrer">
 
 
             <FormKitListColors name="boitier" label="Boitier" />
+            <FormKit type="select" name="idmateriaux_boitier" label="Matériaux Bracelet" :options="optionsMateriaux" />
             <FormKitListColors name="bracelet" label="Bracelet" />
+            <FormKit type="select" name="idmateriaux_bracelet" label="Matériaux Bracelet" :options="optionsMateriaux" />
             <FormKit name="taille" label="Taille" type="select" :options="{
                 14: '14cm',
                 15: '15cm',
@@ -83,10 +100,9 @@ if (props.id) {
                 18: '18cm',
                 19: '19cm',
             }" />
-
-
             <FormKitEcran name="ecran" label="Écran" />
             <FormKit label="forme" name="forme" type="radio" :options="forme" options-class="flex gap-4" />
+
 
         </FormKit>
 
