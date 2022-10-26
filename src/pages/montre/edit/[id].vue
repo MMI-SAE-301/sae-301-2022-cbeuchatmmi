@@ -4,8 +4,8 @@ defineProps<{
     id: string;
 }>();
 </script>
-<template>
-    <div class="p-2">
+<template >
+    <div class="bg-noir2">
         <FormMontre :id="id" />
     </div>
 </template>
