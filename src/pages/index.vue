@@ -60,9 +60,9 @@ import ChevronGauche from '@/components/chevronGauche.vue';
     <h2 class="font-darker-grotesque text-xl text-brun">Styles de Montres</h2>
     <div class="flex flex-col items-center justify-center gap-4">
       <ChevronGauche class="hidden" />
-      <img src="@/assets/Montre1.jpg" alt="">
-      <img src="@/assets/Montre2.jpg" alt="">
-      <img src="@/assets/Montre3.jpg" alt="">
+      <img src="@/assets/Montre1.png" alt="">
+      <img src="@/assets/Montre2.png" alt="">
+      <img src="@/assets/Montre3.png" alt="">
       <ChevronDroit class="hidden" />
     </div>
   </div>
