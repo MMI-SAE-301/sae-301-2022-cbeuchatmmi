@@ -5,7 +5,8 @@ import MontreCarre from "./MontreCarre.vue";
 import MontreRonde from "./MontreRonde.vue";
 import { colors, materiaux, ecran } from "@/types"
 import { useRouter } from "vue-router";
-//import FormKitListColors from '@/components/FormKitListColors.vue'
+import FormKitListColors from '@/components/FormKitListColors.vue'
+import FormKitEcran from '@/components/FormKitEcran.vue'
 //import FormKitListMateriaux from './FormKitListMateriaux.vue'
 
 const router = useRouter();
@@ -17,14 +18,14 @@ const props = defineProps<{
 const montre = ref<Montre>(props.data ?? {});
 
 
-// async function upsertMontre(dataForm, node) {
-//     const { data, error } = await supabase.from("montre").upsert(dataForm);
-//     if (error) node.setErrors([error.message]);
-//     else {
-//         node.setErrors([]);
-//         router.push({ name: "montre-edit-id", params: { id: data[0].idmontre } });
-//     }
-// }
+async function upsertMontre(dataForm, node) {
+    const { data, error } = await supabase.from("montre").upsert(dataForm);
+    if (error) node.setErrors([error.message]);
+    else {
+        node.setErrors([]);
+        router.push({ name: "montre-edit-id", params: { id: data[0].idmontre } });
+    }
+}
 
 if (props.id) {
     let { data, error } = await supabase
@@ -69,38 +70,12 @@ if (props.id) {
             <MontreCarre class="carousel-item w-64" v-bind="montre" id="carre" />
             <MontreRonde class="carousel-item w-64" v-bind="montre" id="ronde" />
         </div>
-        <!-- <FormKit type="form" v-model="montre" @submit="upsertMontre"> -->
-        <FormKit type="form" v-model="montre">
+        <FormKit type="form" v-model="montre" @submit="upsertMontre">
 
 
-            <FormKit name="boitier" label="boitier" value="#FFFFFF" type="radio" :options="colors"
-                :sections-schema="{ inner: { $el: null }, decoration: { $el: null }, }" input-class="peer sr-only"
-                options-class="flex gap-1">
-                <template #label="context">
-                    <div class="h-6 w-6 rounded-full border-2 peer-checked:border-brun2"
-                        :style="{ backgroundColor: context.option.value }"></div>
-                    <span class="sr-only">{{ context.option.label }}</span>
-                </template>
-            </FormKit>
-            <FormKit name="bracelet" label="Bracelet" value="#FFFFFF" type="radio" :options="colors"
-                :sections-schema="{ inner: { $el: null }, decoration: { $el: null }, }" input-class="peer sr-only"
-                options-class="flex gap-1">
-                <template #label="context">
-                    <div class="h-6 w-6 rounded-full border-2 peer-checked:border-brun2"
-                        :style="{ backgroundColor: context.option.value }"></div>
-                    <span class="sr-only">{{ context.option.label }}</span>
-                </template>
-            </FormKit>
-            <FormKit name="ecran" label="ecran" value="#FFFFFF" type="radio" :options="ecran"
-                :sections-schema="{ inner: { $el: null }, decoration: { $el: null }, }" input-class="peer sr-only"
-                options-class="flex gap-1">
-                <template #label="context">
-                    <div class="h-6 w-6 rounded-full border-2 peer-checked:border-brun2"
-                        :style="{ backgroundColor: context.option.value }"></div>
-                    <span class="sr-only">{{ context.option.label }}</span>
-                </template>
-            </FormKit>
-
+            <FormKitListColors name="boitier" label="boitier" />
+            <FormKitListColors name="bracelet" label="Bracelet" />
+            <FormKitEcran name="ecran" label="ecran" />
 
 
         </FormKit>
