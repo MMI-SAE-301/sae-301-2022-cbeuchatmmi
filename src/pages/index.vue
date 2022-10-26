@@ -6,9 +6,9 @@ import ChevronGauche from '@/components/chevronGauche.vue';
 </script>
 <template class="bg-gris">
 
-  <div class="bg-noir">
+  <div class="bg-noir lg:flex">
 
-    <div class="text-center h-[700px]  grid place-content-center items-center">
+    <div class="text-center lg:w-[800px] h-[800px]  grid place-content-center items-center">
 
 
       <h1 class="font-cantarell text-2xl text-blanc">TiK•TaK</h1>
@@ -29,20 +29,24 @@ import ChevronGauche from '@/components/chevronGauche.vue';
         <chevronBas />
       </div>
     </div>
-  </div>
-  <div class="hidden lg:flex">
-    <img class=" " src="../assets/accueil.jpg" alt="montre">
+    <div class="hidden lg:flex">
+      <img class=" " src="../assets/accueil.jpg" alt="montre">
+    </div>
   </div>
 
 
   <div class="">
-    <span class="bg-brun rounded-full  text-[30px] text-blanc p-1">-20%</span>
+    <span
+      class="bg-brun rounded-full  text-[30px] text-blanc p-1 lg:absolute lg:translate-x-10 lg:-translate-y-16  lg:text-[64px] lg:p-2">-20%</span>
 
-    <div class="">
+    <div class="lg:flex lg:m-32 lg:text-center">
 
       <div class="bg-blanc text-center">
-        <h2 class="font-darker-grotesque text-xl text-noir">Mirror Watch</h2>
-        <p class="font-darker-grotesque text-lg text-noir">Des montres connectées uniques avec plus d’un
+        <h2 class="font-darker-grotesque lg:text-3xl text-xl text-noir">Mirror
+          Watch</h2>
+        <p class="font-darker-grotesque lg:text-xl lg:mr-24 lg:ml-24 text-lg text-noir">Des montres connectées uniques
+          avec plus
+          d’un
           millier de
           façons de les customiser</p>
         <RouterLink to="/montre/new">
@@ -57,31 +61,32 @@ import ChevronGauche from '@/components/chevronGauche.vue';
   </div>
 
   <div class="text-center">
-    <h2 class="font-darker-grotesque text-xl text-brun">Styles de Montres</h2>
-    <div class="flex flex-col items-center justify-center gap-4">
-      <ChevronGauche class="hidden" />
+    <h2 class="font-darker-grotesque text-xl text-brun mb-8 ">Styles de Montres</h2>
+    <div class="flex flex-warp items-center justify-center gap-4  lg:gap-10 ">
+      <ChevronGauche class="hidden lg:flex" />
       <img src="@/assets/Montre1.png" alt="">
       <img src="@/assets/Montre2.png" alt="">
       <img src="@/assets/Montre3.png" alt="">
-      <ChevronDroit class="hidden" />
+      <ChevronDroit class="hidden lg:flex" />
     </div>
   </div>
 
 
-  <div>
-    <div class="bg-noir2">
-      <h2 class="font-darker-grotesque text-xl m-4 text-brun2">Notre Histoire</h2>
-      <p class="font-darker-grotesque text-lg m-4 text-brun2">Des montres connectées uniques avec plus d’un millier
+  <div class="lg:flex lg:m-32 bg-noir2">
+    <div>
+      <h2 class="font-darker-grotesque lg:text-2xl m-4 text-brun2 text-xl ">Notre Histoire</h2>
+      <p class="font-darker-grotesque text-lg lg:text-xl m-4 text-brun2">Des montres connectées uniques avec plus d’un
+        millier
         de
         façons de les customiser</p>
-      <div class="flex justify-center mb-4">
+      <div class="flex justify-center mb-4 ">
 
         <Bouton nom="Notre Histoire"
           class="bg-brun mt-7  text-blanc font-darker-grotesque text-lg rounded-xl text-center" />
       </div>
-      <div>
-        <img class="m-auto  lg:h-[594px]" src="@/assets/Notre_histoire.jpg" alt="montre connecté">
-      </div>
+    </div>
+    <div>
+      <img class="m-auto  lg:h-[594px]" src="@/assets/Notre_histoire.jpg" alt="montre connecté">
     </div>
   </div>
 
