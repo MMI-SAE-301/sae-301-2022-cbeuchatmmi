@@ -3,7 +3,7 @@ import type { Montre } from '@/types';
 import { ref } from "vue";
 import MontreCarre from "./MontreCarre.vue";
 import MontreRonde from "./MontreRonde.vue";
-import { colors, materiaux } from "@/types"
+import { colors, materiaux, ecran } from "@/types"
 import { useRouter } from "vue-router";
 //import FormKitListColors from '@/components/FormKitListColors.vue'
 //import FormKitListMateriaux from './FormKitListMateriaux.vue'
@@ -91,7 +91,7 @@ if (props.id) {
                     <span class="sr-only">{{ context.option.label }}</span>
                 </template>
             </FormKit>
-            <FormKit name="ecran" label="ecran" value="#FFFFFF" type="radio" :options="colors"
+            <FormKit name="ecran" label="ecran" value="#FFFFFF" type="radio" :options="ecran"
                 :sections-schema="{ inner: { $el: null }, decoration: { $el: null }, }" input-class="peer sr-only"
                 options-class="flex gap-1">
                 <template #label="context">
