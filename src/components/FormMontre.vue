@@ -7,8 +7,7 @@ import { colors, materiaux, ecran, forme } from "@/types"
 import { useRouter } from "vue-router";
 import FormKitListColors from '@/components/FormKitListColors.vue'
 import FormKitEcran from '@/components/FormKitEcran.vue'
-//import FormKitListMateriaux from './FormKitListMateriaux.vue'
-
+import Bouton from '@/components/Bouton.vue';
 const router = useRouter();
 const props = defineProps<{
     data?: Montre;
@@ -76,8 +75,8 @@ async function supprimerMontre() {
     }
 }
 </script>
-<template>
-    <div class="p-2">
+<template >
+    <div class="text-brun2 font-darker-grotesque text-[2rem]">
 
 
 
@@ -97,9 +96,13 @@ async function supprimerMontre() {
                 19: '19cm',
             }" />
             <FormKitEcran name="ecran" label="Écran" />
-            <FormKit label="forme" name="forme" type="radio" :options="forme" options-class="flex gap-4" />
+            <FormKit label="Forme de la montre" name="forme" type="radio" :options="forme" options-class="flex gap-4"
+                radioDecorator="bg-brun" />
 
         </FormKit>
+        <RouterLink to="/montre/indexMontre">
+            <Bouton nom="Vos montres" class="bg-brun mb-2 text-blanc font-darker-grotesque  rounded-xl " />
+        </RouterLink>
 
         <button type="button" v-if="montre.idmontre" @click="($refs.dialogSupprimer as any).showModal()"
             class="focus-style justify-self-end rounded-md bg-red-500 p-2 shadow-sm">
@@ -117,9 +120,9 @@ async function supprimerMontre() {
 
 
 
-        <div class="carousel w-64">
-            <MontreCarre class="carousel-item w-64" v-bind="montre" id="carre" />
-            <MontreRonde class="carousel-item w-64" v-bind="montre" id="ronde" />
+        <div class="bg-gris flex flex-col items-center justify-center gap-4">
+            <MontreCarre class="w-64" v-bind="montre" id="carre" />
+            <MontreRonde class=" w-64" v-bind="montre" id="ronde" />
         </div>
     </div>
 </template>
