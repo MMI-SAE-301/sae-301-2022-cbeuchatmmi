@@ -3,7 +3,7 @@ import type { Montre } from '@/types';
 import { ref } from "vue";
 import MontreCarre from "./MontreCarre.vue";
 import MontreRonde from "./MontreRonde.vue";
-import { colors, materiaux, ecran } from "@/types"
+import { colors, materiaux, ecran, forme } from "@/types"
 import { useRouter } from "vue-router";
 import FormKitListColors from '@/components/FormKitListColors.vue'
 import FormKitEcran from '@/components/FormKitEcran.vue'
@@ -73,12 +73,24 @@ if (props.id) {
         <FormKit type="form" v-model="montre" @submit="upsertMontre">
 
 
-            <FormKitListColors name="boitier" label="boitier" />
+            <FormKitListColors name="boitier" label="Boitier" />
             <FormKitListColors name="bracelet" label="Bracelet" />
-            <FormKitEcran name="ecran" label="ecran" />
+            <FormKit name="taille" label="Taille" type="select" :options="{
+                14: '14cm',
+                15: '15cm',
+                16: '16cm',
+                17: '17cm',
+                18: '18cm',
+                19: '19cm',
+            }" />
 
+
+            <FormKitEcran name="ecran" label="Écran" />
+            <FormKit label="forme" name="forme" type="radio" :options="forme" options-class="flex gap-4" />
 
         </FormKit>
+
+
 
 
 
