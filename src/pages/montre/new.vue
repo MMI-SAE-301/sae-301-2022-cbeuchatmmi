@@ -9,12 +9,12 @@ import FormMontre from "@/components/FormMontre.vue";
 
     <h1 class="bg-noir2  text-center font-darker-grotesque text-xl text-brun2">Personnaliser</h1>
     <FormMontre class="bg-noir2" />
-    <h2 class="bg-noir2  text-center font-darker-grotesque text-xl text-brun2"> Styles de Montres</h2>
-    <div class="flex flex-col items-center justify-center gap-4">
-
-        <img class="w-[75%]" src="@/assets/Montre1.png" alt="">
-        <img class="w-[75%]" src="@/assets/Montre2.png" alt="">
-        <img class="w-[75%]" src="@/assets/Montre3.png" alt="">
-
+    <div class="text-center">
+        <h2 class="font-darker-grotesque text-xl text-brun mb-8 ">Styles de Montres</h2>
+        <div class="flex flex-warp items-center justify-center gap-4  lg:gap-10 ">
+            <img src="@/assets/Montre1.png" alt="">
+            <img src="@/assets/Montre2.png" alt="">
+            <img src="@/assets/Montre3.png" alt="">
+        </div>
     </div>
 </template>
