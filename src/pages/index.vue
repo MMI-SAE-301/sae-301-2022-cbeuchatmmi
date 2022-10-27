@@ -65,9 +65,9 @@ import ChevronGauche from '@/components/chevronGauche.vue';
     <h2 class="font-darker-grotesque text-xl text-brun mb-8 ">Styles de Montres</h2>
     <div class="flex flex-warp items-center justify-center gap-4  lg:gap-10 ">
       <ChevronGauche class="hidden lg:flex" />
-      <img src="@/assets/Montre1.png" alt="">
-      <img src="@/assets/Montre2.png" alt="">
-      <img src="@/assets/Montre3.png" alt="">
+      <img src="@/assets/Montre1.png" alt="exemple de montre">
+      <img src="@/assets/Montre2.png" alt="exemple de montre">
+      <img src="@/assets/Montre3.png" alt="exemple de montre">
       <ChevronDroit class="hidden lg:flex" />
     </div>
   </div>
@@ -87,7 +87,7 @@ import ChevronGauche from '@/components/chevronGauche.vue';
       </div>
     </div>
     <div>
-      <img class="m-auto  lg:h-[594px]" src="@/assets/Notre_histoire.jpg" alt="montre connecté">
+      <img class="m-auto  lg:h-[594px]" src="@/assets/Notre_histoire.jpg" alt="image de vieille montre">
     </div>
   </div>
 

@@ -12,9 +12,9 @@ import FormMontre from "@/components/FormMontre.vue";
     <div class="text-center">
         <h2 class="font-darker-grotesque text-xl text-brun mb-8 ">Styles de Montres</h2>
         <div class="flex flex-warp items-center justify-center gap-4  lg:gap-10 ">
-            <img src="@/assets/Montre1.png" alt="">
-            <img src="@/assets/Montre2.png" alt="">
-            <img src="@/assets/Montre3.png" alt="">
+            <img src="@/assets/Montre1.png" alt="exemple de montre">
+            <img src="@/assets/Montre2.png" alt="exemple de montre">
+            <img src="@/assets/Montre3.png" alt="exemple de montre">
         </div>
     </div>
 </template>
