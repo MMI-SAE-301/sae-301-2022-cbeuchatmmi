@@ -2,6 +2,7 @@ export interface Montre {
     ecran?: string;
     bracelet?: string;
     boitier?: string;
+    idmontre?: string;
 }
 export const colors = {
     "#282424": "Antracite",

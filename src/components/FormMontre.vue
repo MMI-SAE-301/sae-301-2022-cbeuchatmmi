@@ -108,7 +108,7 @@ async function supprimerMontre() {
             </RouterLink>
 
             <button type="button" v-if="montre.idmontre" @click="($refs.dialogSupprimer as any).showModal()"
-                class="focus-style justify-self-end rounded-md bg-red-500 p-2 shadow-sm">
+                class=" m-6 focus-style justify-self-end rounded-md bg-red-500 p-2 shadow-sm">
                 Supprimer
             </button>
             <dialog ref="dialogSupprimer" @click="($event.currentTarget as any).close()">
