@@ -3,7 +3,7 @@
 - **Nom : BEUCHAT**
 - **Prénom : Corentin**
 - **URL maquette Figma: https://www.figma.com/file/hAzwugowPXYU7YNuHSf8Uc/SAE_301?node-id=1%3A3**
-- **URL publique du site :**
+- **URL publique du site :https://www.tiktak.cbeuchat.fr**
 - **URL projet Supabase : https://app.supabase.com/project/fgziuxaxxqsfjegwwsii**
   - [X] Avez-vous invité abdallah.makhoul@univ-fcomte.fr dans votre 'Organisation' Supabase ?
 
