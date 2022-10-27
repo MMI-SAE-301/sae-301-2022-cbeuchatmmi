@@ -3,7 +3,7 @@ import type { Montre } from '@/types';
 import { ref } from "vue";
 import MontreCarre from "./MontreCarre.vue";
 import MontreRonde from "./MontreRonde.vue";
-import { colors, materiaux, ecran, forme } from "@/types"
+import { colors, ecran, forme } from "@/types"
 import { useRouter } from "vue-router";
 import FormKitListColors from '@/components/FormKitListColors.vue'
 import FormKitEcran from '@/components/FormKitEcran.vue'
