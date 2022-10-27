@@ -85,7 +85,7 @@ async function supprimerMontre() {
 
 
                 <FormKitListColors name="boitier" label="Boitier" />
-                <FormKit type="select" name="idmateriaux_boitier" label="Matériaux Bracelet"
+                <FormKit type="select" name="idmateriaux_boitier" label="Matériaux Boitier"
                     :options="optionsMateriaux" />
                 <FormKitListColors name="bracelet" label="Bracelet" />
                 <FormKit type="select" name="idmateriaux_bracelet" label="Matériaux Bracelet"
