@@ -24,13 +24,7 @@ export const ecran = {
 
 }
 
-export const materiaux = [
-    {
-        value: "http://url/image/cuir",
-        label: "Cuir",
-    },
 
-];
 
 export const forme = [
     {
