@@ -34,31 +34,34 @@ Noté sur 40.
 - [ ] usage de Classes utilitaires (1pt)
   - lien vers sa définition
   - lien vers son usage
-- [ ] Composants graphiques (0-1-2pts)
-  - liens
+- [X] Composants graphiques (0-1-2pts)
+  - liens 
+  - [Les chevrons](https://github.com/MMI-SAE-301/sae-301-2022-cbeuchatmmi/commit/2034e8b00c10d287c4a23ed32e3f32b4107d1c66)
+  - [Bouton](https://github.com/MMI-SAE-301/sae-301-2022-cbeuchatmmi/commit/80d20988465760e27bd0ce9e0f192d026eb6f20a)
 - Technique CSS (0-1-2pts)
   - Quelles techniques (Eg. Styles graphiques (répétés) tous ajoutés par CSS et/ou
     config. Tailwind (eg. before/after avec content, background...))
-    - ...
+    - 
   - liens
 - Mise en page CSS (0-1-2pts)
   - Quelles techniques (Grilles Flex...)
-    - ...
+    - Flex
+    - Grid
   - liens
-  - [ ] Mise en page fluide
-- [ ] Mobile First (0-1-2pts)
-  - [ ] Plusieurs tailles
-    - Lesquelles...
-- [ ] Dark Mode (0-1-2pts)
-  - [ ] Simple usage de 'dark:'
+  - [X] Mise en page fluide
+- [X] Mobile First (0-1-2pts)
+  - [X] Plusieurs tailles
+    - Mobile first et à partir de lg le site s'adapte
+- [X] Dark Mode (0-1-2pts)
+  - [X] Simple usage de 'dark:' [dark-mode](https://github.com/MMI-SAE-301/sae-301-2022-cbeuchatmmi/commit/4c00d3ffa1ab3de7d7683469eeb6fe685cda9523)
   - [ ] Mise en place avec usage de custom property pour les couleurs. Ou usage de DaisyUI AVEC thèmes perso
     - liens
 - "tailwin.config.js" (0-1-2pts)
-  - [ ] usage basique couleurs/fonts
-  - [ ] Comporte des données supplémentaires (utilisées !). Eg: "content-xxx", "bg-xxx", "grid-cols-xxx"...
+  - [X] usage basique couleurs/fonts [Tailwindcss](https://github.com/MMI-SAE-301/sae-301-2022-cbeuchatmmi/commit/786a2d315191f2f8b5c214c10e4de59ca9924529)
+  - [X] Comporte des données supplémentaires (utilisées !). Eg: "content-xxx", "bg-xxx", "grid-cols-xxx"... [Tailwindcss+] (/src/tailwind.config.js#L27))
     - liens
 - Composants "accessibles" (0-1-2pts)
-  - [ ] textes "accessibles" (eg. 'sr-only')
+  - [X] textes "accessibles" (eg. 'sr-only') [sr-only](https://github.com/MMI-SAE-301/sae-301-2022-cbeuchatmmi/commit/fba112207e527674b49a4b46af9777688a42fa88)
   - [ ] Contenu accessible ET Usage de composants étudié pour accessibilité (Eg. HeadlessUI)
 
 [^1]: Supprimez les mentions inutiles.
