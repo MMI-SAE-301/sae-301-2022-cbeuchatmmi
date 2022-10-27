@@ -1,14 +1,14 @@
 <template>
 
 
-  <nav class="bg-black">
-    <div class="flex ">
+  <nav class="bg-black relative ">
+    <div class="flex  ">
 
       <Router-link to="/">
         <h1 class="font-cantarell text-lg text-blanc">TiK•TaK</h1>
       </Router-link>
       <ul>
-        <li class="flex">
+        <li class="flex m-4">
           <router-link class="text-blanc hidden lg:flex text-[20px] ml-8 " to="/">
             <code class="font-mono">Accueil</code>
           </router-link>
@@ -24,8 +24,8 @@
 
         </li>
       </ul>
-      <h4 class=" lg:hidden">
-        <Bars3Icon class=" h-5 w-5 text-white" />
+      <h4 class=" lg:hidden absolute right-0 ">
+        <Bars3Icon class=" h-10 w-10 text-white" />
         menu (dans <code class="font-mono">/src/App.vue</code>)
       </h4>
     </div>
