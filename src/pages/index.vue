@@ -4,7 +4,7 @@ import chevronBas from '@/components/chevronBas.vue';
 import ChevronDroit from '@/components/chevronDroit.vue';
 import ChevronGauche from '@/components/chevronGauche.vue';
 </script>
-<template class="bg-gris">
+<template class="bg-gris dark:bg-noir2">
 
   <div class="bg-noir lg:flex">
 
@@ -41,10 +41,11 @@ import ChevronGauche from '@/components/chevronGauche.vue';
 
     <div class="lg:flex lg:m-32 lg:text-center">
 
-      <div class="bg-blanc text-center">
-        <h2 class="font-darker-grotesque lg:text-3xl text-xl text-noir">Mirror
+      <div class="bg-blanc dark:bg-noir text-center">
+        <h2 class="font-darker-grotesque lg:text-3xl text-xl dark:text-blanc text-noir">Mirror
           Watch</h2>
-        <p class="font-darker-grotesque lg:text-xl lg:mr-24 lg:ml-24 text-lg text-noir">Des montres connectées uniques
+        <p class="font-darker-grotesque lg:text-xl lg:mr-24 lg:ml-24 text-lg dark:text-blanc text-noir">Des montres
+          connectées uniques
           avec plus
           d’un
           millier de

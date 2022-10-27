@@ -124,7 +124,7 @@ async function supprimerMontre() {
 
 
 
-        <div class="bg-gris flex flex-col items-center justify-center gap-4 lg:w-[600px]   ">
+        <div class="bg-gris dark:bg-noir2 flex flex-col items-center justify-center gap-4 lg:w-[600px]   ">
             <MontreCarre class="w-64" v-bind="montre" id="carre" />
             <MontreRonde class=" w-64" v-bind="montre" id="ronde" />
         </div>
